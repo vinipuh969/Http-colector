@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>scrinium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Http colector— Сборщик информации</h1>
+    
+    <div id="error-msg" class="error"></div>
+
+    <div>
+        <input type="text" id="keyword-input" placeholder="Введите слово (news, code, search)">
+        <button id="search-btn">Найти URL</button>
+    </div>
+
+    <div class="progress-bar" id="progress-container">
+        <div class="progress-fill" id="progress-fill">0%</div>
+    </div>
+    <div id="status-text" class="status-info"></div>
+
+    <div class="container">
+        <div class="box">
+            <h3>Найденные URL</h3>
+            <ul id="url-list"></ul>
+
+            <h3>Оффлайн архив (LocalStorage)</h3>
+            <ul id="offline-list"></ul>
+        </div>
+
+        <div class="box">
+            <h3>Просмотр контента</h3>
+            <div id="view-title" class="view-header">Выберите страницу из архива</div>
+            <iframe id="content-viewer" srcdoc="<p style='color:gray; padding:10px;'>Контент отобразится здесь</p>"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
